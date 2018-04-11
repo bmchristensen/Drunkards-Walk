@@ -16,9 +16,6 @@ void ofApp::update() {
 }
 
 void ofApp::draw() {
-	//ofSetColor(walker->color);
-	//ofDrawCircle(walker->x, walker->y, walker->size);
-
 	for (int i = 0; i < NUM_WALKERS; ++i) {
 		walkers[i]->draw();
 	}

@@ -16,14 +16,11 @@ void Walker::move() {
 
 	if (direction == 0) {
 		--y;
-	} 
-	if (direction == 1) {
+	} else if (direction == 1) {
 		++x;
-	} 
-	if (direction == 2) {
+	} else if (direction == 2) {
 		++y;
-	} 
-	if (direction == 3) {
+	} else {
 		--x;
 	}
 }
