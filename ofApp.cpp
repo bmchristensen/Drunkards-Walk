@@ -1,6 +1,6 @@
 #include "ofApp.h"
 
-const int NUM_WALKERS = 100;
+static const int NUM_WALKERS = 100;
 
 void ofApp::setup() {
 	ofSetBackgroundColor(55);
