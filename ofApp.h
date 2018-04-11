@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "walker.h"
+#include "Walker.h"
 
 class ofApp : public ofBaseApp {
 
