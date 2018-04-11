@@ -5,7 +5,7 @@ static const int NUM_WALKERS = 100;
 void ofApp::setup() {
 	ofSetBackgroundColor(55);
 	for (int i = 0; i < NUM_WALKERS; ++i) {
-		walkers.push_back(new Walker(ofGetWidth() / 2, ofGetHeight() / 2, 10, ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255))));
+		walkers.push_back(new Walker(ofGetWidth() / 2, ofGetHeight() / 2, 10, ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255))));
 	}
 }
 
