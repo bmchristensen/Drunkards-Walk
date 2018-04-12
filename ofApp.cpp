@@ -6,7 +6,9 @@ static const int NUM_WALKERS = 100;
 void ofApp::setup() {
 	mySound.load("chariotFire.mp3");
 	mySound.play();
+
 	ofSetBackgroundColor(55);
+
 	for (int i = 0; i < NUM_WALKERS; ++i) {
 		walkers.push_back(new Walker(ofGetWidth() / 2, ofGetHeight() / 2, 10, ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255))));
 	}
@@ -19,6 +21,10 @@ void ofApp::update() {
 }
 
 void ofApp::draw() {
+	ofSetColor(255);
+	ofDrawBitmapString("fps: " + ofToString(ofGetFrameRate()), 10, 15);
+	ofDrawBitmapString("frames: " + ofToString(ofGetFrameNum()), 10, 30);
+
 	for (int i = 0; i < NUM_WALKERS; ++i) {
 		walkers[i]->draw();
 	}
