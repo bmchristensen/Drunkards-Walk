@@ -7,6 +7,7 @@ class ofApp : public ofBaseApp {
 
 	public:
 		vector<Walker*> walkers;
+
 		void setup();
 		void update();
 		void draw();
