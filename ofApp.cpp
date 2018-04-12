@@ -4,10 +4,13 @@
 static const int NUM_WALKERS = 100;
 
 void ofApp::setup() {
+	// Seed rand func
+	srand(NULL);
+
 	mySound.load("chariotFire.mp3");
 	mySound.play();
 
-	ofSetBackgroundColor(55);
+	ofSetBackgroundColor(65);
 
 	for (int i = 0; i < NUM_WALKERS; ++i) {
 		walkers.push_back(new Walker(ofGetWidth() / 2, ofGetHeight() / 2, 10, ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255))));
