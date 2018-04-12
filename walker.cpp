@@ -12,7 +12,7 @@ Walker::Walker(int x, int y, int size, ofColor color) {
 }
 
 void Walker::move() {
-	int direction = rand()%4;
+	int direction = rand() % 4;
 
 	if (direction == 0) {
 		--y;
