@@ -1,31 +1,26 @@
 #include "Walker.h"
 
 Walker::Walker() {
-
-}
-
-Walker::Walker(int x, int y, int size, ofColor color) {
-	this->x = x;
-	this->y = y;
-	this->size = size;
-	this->color = color;
+	this->walkerLocation.set(ofGetWidth() / 2, ofGetHeight() / 2);
+	this->size = 10;
+	this->color = ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255));
 }
 
 void Walker::move() {
 	int direction = rand() % 4;
 
 	if (direction == 0) {
-		--y;
+		--walkerLocation.y;
 	} else if (direction == 1) {
-		++x;
+		++walkerLocation.x;
 	} else if (direction == 2) {
-		++y;
+		++walkerLocation.y;
 	} else {
-		--x;
+		--walkerLocation.x;
 	}
 }
 
 void Walker::draw() {
 	ofSetColor(color);
-	ofDrawCircle(x, y, size);
+	ofDrawCircle(walkerLocation, size);
 }

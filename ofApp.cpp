@@ -13,7 +13,7 @@ void ofApp::setup() {
 	ofSetBackgroundColor(65);
 
 	for (int i = 0; i < NUM_WALKERS; ++i) {
-		walkers.push_back(new Walker(ofGetWidth() / 2, ofGetHeight() / 2, 10, ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255))));
+		walkers.push_back(new Walker());
 	}
 }
 

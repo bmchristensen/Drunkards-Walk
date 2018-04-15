@@ -5,13 +5,11 @@ class Walker {
 
 public:
 	Walker();
-	Walker(int x, int y, int size, ofColor color);
 	void move();
 	void draw();
 
 private:
-	int x;
-	int y;
+	ofVec2f walkerLocation;
 	int size;
 	ofColor color;
 };
