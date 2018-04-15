@@ -1,7 +1,7 @@
 #include "Walker.h"
 
 Walker::Walker() {
-	this->walkerLocation.set(ofGetWidth() / 2, ofGetHeight() / 2);
+	this->walkerLocation;
 	this->size = 10;
 	this->color = ofColor((int)ofRandom(0, 255), (int)ofRandom(0, 255), (int)ofRandom(0, 255));
 }

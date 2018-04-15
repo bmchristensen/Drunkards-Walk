@@ -28,6 +28,8 @@ void ofApp::draw() {
 	ofDrawBitmapString("fps: " + ofToString(ofGetFrameRate()), 10, 15);
 	ofDrawBitmapString("frames: " + ofToString(ofGetFrameNum()), 10, 30);
 
+	ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
+
 	for (int i = 0; i < NUM_WALKERS; ++i) {
 		walkers[i]->draw();
 	}
