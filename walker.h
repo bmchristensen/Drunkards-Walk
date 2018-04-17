@@ -9,7 +9,8 @@ public:
 	void draw();
 
 private:
-	ofVec2f walkerLocation;
+	ofVec2f walkerPosition;
+	ofVec2f walkerDirection;
 	int size;
 	ofColor color;
 };
