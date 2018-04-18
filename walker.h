@@ -13,4 +13,6 @@ private:
 	ofVec2f walkerDirection;
 	int size;
 	ofColor color;
+	float timeX;
+	float timeY;
 };
