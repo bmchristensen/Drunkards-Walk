@@ -1,21 +1,20 @@
 #include "walker.h"
 
 Walker::Walker() {
-	//this->walkerPosition;
-	//this->walkerDirection;
+	this->walkerDirection.set(ofRandom(-10, 10), ofRandom(-10, 10));
+	this->walkerDirection.normalize();
 	this->size = 10;
-	this->color = ofColor(static_cast<int>(ofRandom(0, 255)), (int)ofRandom(0, 255), (int)ofRandom(0, 255));
-	this->timeX = ofRandom(0, 10000);
-	this->timeY = ofRandom(0, 10000);
+	this->color = ofColor(static_cast<int>(ofRandom(0, 255)), static_cast<int>(ofRandom(0, 255)),
+	                      static_cast<int>(ofRandom(0, 255)));
+
+	this->time = ofRandom(0, 10000);
 }
 
 void Walker::move() {
-	walkerDirection.set(ofDegToRad(ofMap(ofNoise(timeX), 0, 1, -360, 360)),
-	                    ofDegToRad(ofMap(ofNoise(timeY), 0, 1, -360, 360)));
+	walkerDirection.rotate(ofMap(ofNoise(time), 0, 1, 0, 2 * PI));
 	walkerPosition += walkerDirection.normalize();
 
-	timeX += 0.05;
-	timeY += 0.05;
+	time += 0.01;
 }
 
 void Walker::draw() {
