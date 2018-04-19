@@ -1,8 +1,8 @@
 #include "walker.h"
 
 Walker::Walker() {
-	this->walkerDirection.set(ofRandom(-10, 10), ofRandom(-10, 10));
-	this->walkerDirection.normalize();
+	this->walkerPosition = ofVec2f(0, 0);
+	this->walkerDirection = ofVec2f(1, 1);
 	this->size = 10;
 	this->color = ofColor(static_cast<int>(ofRandom(0, 255)), static_cast<int>(ofRandom(0, 255)),
 	                      static_cast<int>(ofRandom(0, 255)));
@@ -11,10 +11,10 @@ Walker::Walker() {
 }
 
 void Walker::move() {
-	walkerDirection.rotate(ofMap(ofNoise(time), 0, 1, 0, 2 * PI));
+	walkerDirection.rotateRad(ofMap(ofNoise(time), 0, 1, -PI, PI));
 	walkerPosition += walkerDirection.normalize();
 
-	time += 0.01;
+	time += 0.05;
 }
 
 void Walker::draw() {
