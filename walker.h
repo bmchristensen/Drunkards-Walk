@@ -14,4 +14,5 @@ private:
 	int size;
 	ofColor color;
 	float time;
+	float timeY;
 };
