@@ -4,8 +4,6 @@
 static const int NUM_WALKERS = 100;
 
 void ofApp::setup() {
-	//ofSetFrameRate(60);
-
 	// Seed rand func
 	srand(NULL);
 
