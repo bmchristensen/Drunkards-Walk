@@ -11,8 +11,7 @@ public:
 private:
 	ofVec2f walkerPosition;
 	ofVec2f walkerDirection;
+	float time;
 	int size;
 	ofColor color;
-	float time;
-	float timeY;
 };
